@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import Jumbotron from "./Jumbotron";
 
 class App extends Component {
   render() {
-    return <div className="jumbotron text-center m-2">Jumbotron!</div>;
+    return <Jumbotron />;
   }
 }
 
