@@ -9,7 +9,7 @@ let oldChirps = [
     userName: "Patrick",
     chirp: "It would help if I would stop being so complex"
   }
-];
+]; //3 chirps on page
 
 class App extends Component {
   constructor(props) {
@@ -23,22 +23,21 @@ class App extends Component {
 
   handleClick(e) {
     e.preventDefault();
-
+    //snapshots
     let chirps = this.state.chirpsArray;
-
     let chirp = {
       userName: this.state.userName,
       chirp: this.state.chirp
     };
 
-    chirps.unshift(chirp);
+    chirps.unshift(chirp); //push new chirp to top of Timeline
 
     this.setState({ userName: "", chirp: "", chirpArray: chirps });
-  }
+  } //when run push values into new card
 
   componentWillMount() {
     this.setState({ chirpsArray: oldChirps });
-  }
+  } //shows oldChirps
 
   render() {
     return (
