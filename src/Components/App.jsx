@@ -3,9 +3,12 @@ import NavBar from "./NavBar";
 import Timeline from "./Timeline";
 
 let oldChirps = [
-  { chirp: "This makes my brain hurt!" },
-  { chirp: "This lab is agravating me" },
-  { chirp: "It would help if I would stop being so complex" }
+  { userName: "Patrick", chirp: "This makes my brain hurt!" },
+  { userName: "Patrick", chirp: "This lab is aggravating me" },
+  {
+    userName: "Patrick",
+    chirp: "It would help if I would stop being so complex"
+  }
 ];
 
 class App extends Component {
@@ -69,7 +72,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <Timeline />
+        <Timeline chirps={this.state.chirpsArray} />
       </>
     );
   }
