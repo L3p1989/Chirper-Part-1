@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "./NavBar";
+import Timeline from "./Timeline";
 
 let oldChirps = [
   { chirp: "This makes my brain hurt!" },
@@ -68,6 +69,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <Timeline />
       </>
     );
   }
