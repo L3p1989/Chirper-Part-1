@@ -6,14 +6,15 @@ class App extends Component {
     super(props);
     this.state = {
       userName: "",
-      chirp: ""
+      chirp: "",
+      chirpsArray: []
     };
   }
 
   handleClick(e) {
     e.preventDefault();
 
-    this.setState({ chirp: "" });
+    this.setState({ userName: "", chirp: "" });
   }
 
   render() {
