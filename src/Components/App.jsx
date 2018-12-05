@@ -6,10 +6,10 @@ class App extends Component {
     return (
       <>
         <NavBar />
-        <div className="container align-content-center mt-5">
+        <div className="container mt-5 w-50">
           <div className="row">
             <div className="col-md-12">
-              <form className="border border-dark">
+              <form className="border border-dark d-flex">
                 <div className="form-group m-5">
                   <input
                     type="email"
@@ -23,9 +23,12 @@ class App extends Component {
                     type="email"
                     className="form-control"
                     id="exampleInputEmail"
-                    placeholder="What's on your mind?"
+                    placeholder="Chirp Chirp"
                   />
                 </div>
+                <button className="btn btn-primary m-2 align-self-end">
+                  Chirp it!
+                </button>
               </form>
             </div>
           </div>
