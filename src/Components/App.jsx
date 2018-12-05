@@ -13,8 +13,6 @@ class App extends Component {
   handleClick(e) {
     e.preventDefault();
 
-    console.log(this.state.chirp);
-
     this.setState({ chirp: "" });
   }
 
