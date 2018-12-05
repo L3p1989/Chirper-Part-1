@@ -24,12 +24,20 @@ class App extends Component {
   handleClick(e) {
     e.preventDefault();
 
-    this.setState({ userName: "", chirp: "" });
+    let chirps = this.state.chirpsArray;
+
+    let chirp = {
+      userName: this.state.userName,
+      chirp: this.state.chirp
+    };
+
+    chirps.unshift(chirp);
+
+    this.setState({ userName: "", chirp: "", chirpArray: chirps });
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.setState({ chirpsArray: oldChirps });
-    console.log(this.state.chirpsArray);
   }
 
   render() {
