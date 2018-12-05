@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import Jumbotron from "./Jumbotron";
+import NavBar from "./NavBar";
 
 class App extends Component {
   render() {
-    return <Jumbotron />;
+    return (
+      <>
+        <NavBar />
+      </>
+    );
   }
 }
 
