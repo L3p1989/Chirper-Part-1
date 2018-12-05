@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import NavBar from "./NavBar";
 
+let oldChirps = [
+  { chirp: "This makes my brain hurt!" },
+  { chirp: "This lab is agravating me" },
+  { chirp: "It would help if I would stop being so complex" }
+];
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +21,11 @@ class App extends Component {
     e.preventDefault();
 
     this.setState({ userName: "", chirp: "" });
+  }
+
+  componentDidMount() {
+    this.setState({ chirpsArray: oldChirps });
+    console.log(this.state.chirpsArray);
   }
 
   render() {
